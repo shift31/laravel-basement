@@ -1,0 +1,25 @@
+{
+    "name": "shift31/laravel-basement",
+    "description": "Laravel 4 Service Provider for the Basement Couchbase ODM",
+    "authors": [
+        {
+            "name": "Shift 31 Consulting",
+            "email": "code@shift31.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x",
+        "basement/basement": "0.3.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Shift31\\LaravelBasement": "src/"
+        }
+    },
+    "license": "MIT",
+    "minimum-stability": "dev"
+}
