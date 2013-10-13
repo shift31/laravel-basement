@@ -5,6 +5,7 @@ namespace Shift31\LaravelBasement;
 
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\AliasLoader;
 use Basement\Client;
 use Config;
 use App;
@@ -53,6 +54,13 @@ class LaravelBasementServiceProvider extends ServiceProvider {
             );
 
             return new Client($defaults);
+        });
+
+        // Shortcut so developers don't need to add an Alias in app/config/app.php
+        $this->app->booting(function()
+        {
+            $loader = AliasLoader::getInstance();
+            $loader->alias('Basement', 'Shift31\LaravelBasement\Facades\Basement');
         });
 	}
 
