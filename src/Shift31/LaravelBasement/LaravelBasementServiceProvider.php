@@ -60,7 +60,7 @@ class LaravelBasementServiceProvider extends ServiceProvider {
         $this->app->booting(function()
         {
             $loader = AliasLoader::getInstance();
-            $loader->alias('Basement', 'Shift31\LaravelBasement\Facades\Basement');
+            $loader->alias('Cb', 'Shift31\LaravelBasement\Facades\Cb');
         });
 	}
 
